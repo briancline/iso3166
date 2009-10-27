@@ -1,0 +1,49 @@
+ISO-3166 and ISO-3166-2 Table Generator
+Copyright (C) Brian Cline, August 2008.
+=======================================
+
+WHAT IS THIS?
+Most web sites have some sort of registration process and ask users to provide
+the name of the country and/or state or province that they live in. Due to 
+laziness, too few of these sites provide a comprehensive, prepopulated list of 
+states and provinces for every country.
+
+The enclosed script will download a comprehensive list of countries as specified
+in the ISO-3166 standard, as well as the corresponding list of states/provinces
+as specified in the ISO-3166-2 standard. After processing, it will output a
+MySQL-formatted dump of this data, complete with table definitions. You can then
+plug this data into select boxes on a web site to allow users to choose a country,
+then provide them with a second select box with a list of their country's states
+or provinces.
+
+I make no claims or guarantees regarding accuracy or reliability of this script
+nor the data it processes and generates. Blah blah blah. Licensed under LGPL 2.1
+as the original data is licensed as such.
+
+
+WHERE DOES THIS DATA COME FROM?
+Some wonderful folks at the Debian project maintain a project called 
+pkg-isocodes, and includes XML files for both ISO-3166 and ISO-3166-2 listings.
+The ISO organization normally charges a lot of money to obtain ISO-3166-2 
+data, despite the fact it ought to be free and open. So it is only fair that 
+you go and thank the folks working on the Debian package:
+
+	https://alioth.debian.org/projects/pkg-isocodes/
+	pkg-isocodes-devel@lists.alioth.debian.org
+
+
+HOW DO I USE THIS?
+The process.php script is meant to be run on the command line. Its output
+will go to STDOUT, so it is recommended that you pipe it out to a .sql file.
+
+The script will download the necessary files for you, so there is no need
+to do anything but run the script.
+
+Example usage:
+$ php process.php > iso_3166_tables.sql
+
+
+WHAT DO I NEED?
+Just PHP with SimpleXML support.
+
+
