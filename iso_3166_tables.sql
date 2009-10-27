@@ -1,5 +1,5 @@
-DROP TABLE `meta_countries`;
-DROP TABLE `meta_provinces`;
+DROP TABLE IF EXISTS `meta_countries`;
+DROP TABLE IF EXISTS `meta_provinces`;
 
 		CREATE TABLE IF NOT EXISTS `meta_countries` (
 			`alpha_2` CHAR( 2 ) NOT NULL ,
@@ -13,7 +13,7 @@ DROP TABLE `meta_provinces`;
 		)
 		ENGINE = MYISAM 
 		CHARACTER SET utf8 
-		COLLATE utf8 
+		COLLATE utf8_unicode_ci 
 		COMMENT = 'ISO 3166 Country List';
 	
 		 CREATE TABLE IF NOT EXISTS `meta_provinces` (
@@ -27,11 +27,9 @@ DROP TABLE `meta_provinces`;
 		)
 		ENGINE = MYISAM 
 		CHARACTER SET utf8 
-		COLLATE utf8 
+		COLLATE utf8_unicode_ci 
 		COMMENT = 'ISO 3166-2 Administrative Entity List';
 	
-DELETE FROM `meta_countries`;
-DELETE FROM `meta_provinces`;
 
 			INSERT INTO `meta_countries` (`alpha_2`, `alpha_3`, `numeric`, `name`, `common_name`, `official_name`)
 			VALUES (

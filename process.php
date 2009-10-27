@@ -10,8 +10,13 @@
 	
 	if($drop_first)
 	{
-		printf("DROP TABLE `meta_countries`;\n");
-		printf("DROP TABLE `meta_provinces`;\n");
+		printf("DROP TABLE IF EXISTS `meta_countries`;\n");
+		printf("DROP TABLE IF EXISTS `meta_provinces`;\n");
+	}
+	else
+	{
+		printf("DELETE FROM `meta_countries`;\n");
+		printf("DELETE FROM `meta_provinces`;\n");
 	}
 	
 	printf("
@@ -27,7 +32,7 @@
 		)
 		ENGINE = MYISAM 
 		CHARACTER SET utf8 
-		COLLATE utf8 
+		COLLATE utf8_unicode_ci 
 		COMMENT = 'ISO 3166 Country List';
 	");
 	printf("
@@ -42,13 +47,11 @@
 		)
 		ENGINE = MYISAM 
 		CHARACTER SET utf8 
-		COLLATE utf8 
+		COLLATE utf8_unicode_ci 
 		COMMENT = 'ISO 3166-2 Administrative Entity List';
 	");
 
 	printf("\n");
-	printf("DELETE FROM `meta_countries`;\n");
-	printf("DELETE FROM `meta_provinces`;\n");
 	
 	foreach($co as $country)
 	{
