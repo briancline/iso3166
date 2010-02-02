@@ -124,9 +124,6 @@
 		$raw = file_get_contents($fn);
 		$x = new SimpleXMLElement($raw);
 		
-		$max_iso_len = 0;
-		$max_code_len = 0;
-		
 		foreach($x->xpath('//iso_3166_country') as $country)
 		{
 			$country_code = (string) $country['code'];
@@ -149,11 +146,6 @@
 						'name'          => (string) $entry['name'],
 						'type'          => $subset_type
 					);
-					
-					if(strlen($iso_code) > $max_iso_len)
-						$max_iso_len++;
-					if(strlen($entry_code) > $max_code_len)
-						$max_code_len++;
 				}
 			}
 		}
