@@ -39310,7 +39310,7 @@ DROP TABLE IF EXISTS `meta_provinces`;
 					'GB-NBL',
 					'GB',
 					'NBL',
-					'Northumbarland',
+					'Northumberland',
 					'Two-tier county'
 				);
 			
