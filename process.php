@@ -2,8 +2,8 @@
 
 	$dropFirst = true;
 
-	$countriesSource = 'http://git.debian.org/?p=iso-codes/iso-codes.git;a=blob_plain;f=iso_3166/iso_3166.xml;hb=HEAD';
-	$provincesSource = 'http://git.debian.org/?p=iso-codes/iso-codes.git;a=blob_plain;f=iso_3166_2/iso_3166_2.xml;hb=HEAD';
+	$countriesSource = 'http://anonscm.debian.org/gitweb/?p=iso-codes/iso-codes.git;a=blob_plain;f=iso_3166/iso_3166.xml;hb=HEAD';
+	$provincesSource = 'http://anonscm.debian.org/gitweb/?p=iso-codes/iso-codes.git;a=blob_plain;f=iso_3166_2/iso_3166_2.xml;hb=HEAD';
 
 	$co = getCountries($countriesSource);
 	$pr = getProvinces($provincesSource);

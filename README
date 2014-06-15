@@ -28,7 +28,7 @@ The ISO organization normally charges a lot of money to obtain ISO-3166-2
 data, despite the fact it ought to be free and open. So it is only fair that
 you go and thank the folks working on the Debian package:
 
-	https://alioth.debian.org/projects/pkg-isocodes/
+	https://pkg-isocodes.alioth.debian.org/
 	pkg-isocodes-devel@lists.alioth.debian.org
 
 
