@@ -4,8 +4,8 @@ Copyright (C) Brian Cline, August 2008.
 
 WHAT IS THIS?
 Most web sites have some sort of registration process and ask users to provide
-the name of the country and/or state or province that they live in. Due to 
-laziness, too few of these sites provide a comprehensive, prepopulated list of 
+the name of the country and/or state or province that they live in. Due to
+laziness, too few of these sites provide a comprehensive, prepopulated list of
 states and provinces for every country.
 
 The enclosed script will download a comprehensive list of countries as specified
@@ -22,10 +22,10 @@ as the original data is licensed as such.
 
 
 WHERE DOES THIS DATA COME FROM?
-Some wonderful folks at the Debian project maintain a project called 
+Some wonderful folks at the Debian project maintain a project called
 pkg-isocodes, and includes XML files for both ISO-3166 and ISO-3166-2 listings.
-The ISO organization normally charges a lot of money to obtain ISO-3166-2 
-data, despite the fact it ought to be free and open. So it is only fair that 
+The ISO organization normally charges a lot of money to obtain ISO-3166-2
+data, despite the fact it ought to be free and open. So it is only fair that
 you go and thank the folks working on the Debian package:
 
 	https://alioth.debian.org/projects/pkg-isocodes/
@@ -45,5 +45,4 @@ $ php process.php > iso_3166_tables.sql
 
 WHAT DO I NEED?
 Just PHP with SimpleXML support.
-
 
